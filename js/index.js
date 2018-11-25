@@ -50,3 +50,4 @@ function mouseMove(e){
     const walkX = x - startX;
     container.scrollLeft = scrollLeft - walkX;      
   }
+}
