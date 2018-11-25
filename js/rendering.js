@@ -8,6 +8,7 @@ export function renderVideo(inputArray, idInput) {
 
     for (let i=0; i < inputArray.length; i++ ) {
         container.innerHTML += `
+        <div class="list-elem">
         <section class="video-instance">
             <img class="video-preview" src="${inputArray[i].image}"></img>
             <header class="video-title" onClick="window.open('http://youtube.com/watch?v=${idInput[i].idVideo}','_blank');">${inputArray[i].title}</header>
@@ -17,7 +18,8 @@ export function renderVideo(inputArray, idInput) {
             <div class="video-views">${idInput[i].views}</div>
             <div class="video-description">${inputArray[i].desc}</div>
         </section>
-        `
+    </div>
+`
     }
 };    
     
