@@ -61,12 +61,4 @@ function mouseMove(e){
     const x = e.pageX - container.offsetLeft;
     const walkX = x - startX;
     container.scrollLeft = scrollLeft - walkX;      
-<<<<<<< HEAD
   }}
-=======
-  }
-<<<<<<< HEAD
->>>>>>> 92d408d68fd8cb9790b6e89267054580dab9af0b
-=======
-}
->>>>>>> 3b8b77d80d007ef7f63d25b76e0f8c4d0d770ccc
