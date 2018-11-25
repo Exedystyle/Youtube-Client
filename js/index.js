@@ -22,7 +22,11 @@ container.addEventListener('mousedown',e => mouseIsDown(e));
 container.addEventListener('mouseup',e => mouseUp(e))
 container.addEventListener('mouseleave',e=>mouseLeave(e));
 container.addEventListener('mousemove',e=>mouseMove(e));
-container.addEventListener('mouseover',e=>mouseMove(e));
+
+container.addEventListener('touchstart',e => mouseIsDown(e));  
+container.addEventListener('touchend',e => mouseUp(e))
+container.addEventListener('touchcancel',e=>mouseLeave(e));
+container.addEventListener('touchmove',e=>mouseMove(e));
 
 function mouseIsDown(e){
     isDown = true;
