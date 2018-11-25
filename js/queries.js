@@ -14,8 +14,6 @@ fetch(`https://www.googleapis.com/youtube/v3/search?pageToken=${nextPageToken}&k
     let idArray=[];
     let infoArray=[];
     nextPageToken = res.nextPageToken;
-   // console.log(res);
-    
     for (let i of res.items){
         infoArray.push({
             'title': i.snippet.title, 
@@ -30,13 +28,10 @@ fetch(`https://www.googleapis.com/youtube/v3/search?pageToken=${nextPageToken}&k
     
     let str = idArray.join();
     idArray = [];
-    console.log(idArray);
-    
-    
+   
     fetch(`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyAywPAQmtJ1zukV8EGqyS_d8UXO8oESiH4&id=${str}&part=snippet,statistics`)
     .then(res => res.json())
     .then(res => { 
-         //console.log(res);
           for(let i of res.items){
             idArray.push({
                 'idVideo': i.id,

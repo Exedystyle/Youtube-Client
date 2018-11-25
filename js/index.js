@@ -1,19 +1,31 @@
 import {searchVideos as goSearch}  from './queries.js';
 
+function loadPage(){
+    let page = document.querySelector("body");
+    page.innerHTML += `
+    <div class="wrapper">
+        <header class="logo"></header>
+        <div class="search">
+            <input class="search-input" type="text" id="search-input" ">
+            <button class="search-button" id="first-search">Search</button>
+        </div>
+        <div class="result-inner">
+        </div> 
+    </div>
+`
+};
+loadPage();
+
 let searchButton = document.getElementById('first-search');
 let searchMore = document.getElementById('more-search');
-
 
 searchButton.addEventListener("click", goSearch);
 document.addEventListener("keydown", function(e){
    if (e.keyCode == 13) goSearch();
 });
 
-
-
 const container = document.querySelector('.result-inner');
                 
-
 let startX;
 let scrollLeft;
 let isDown;
@@ -49,4 +61,4 @@ function mouseMove(e){
     const x = e.pageX - container.offsetLeft;
     const walkX = x - startX;
     container.scrollLeft = scrollLeft - walkX;      
-  }
+  }}
