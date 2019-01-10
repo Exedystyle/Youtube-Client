@@ -15,7 +15,7 @@ body {
     min-width: 300px;
     max-width: 400px;
     height: 100px;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png) no-repeat;
+    background: url(../img/main_logo.png) no-repeat;
     background-size: contain;
 }
 
