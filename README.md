@@ -1,3 +1,3 @@
 # youtube-client
 PureJS youtube search client
-https://exedystyle.github.io/yt-client-test/
+https://exedystyle.github.io/Youtube-Client/
